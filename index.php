@@ -391,13 +391,11 @@
               debitis aliquid dolor reiciendis praesentium?
             </p>
             <div class="subscribe__button-contaier">
-              <input
-                class="input"
-                type="text"
-                name="email"
-                placeholder="メールアドレス"
-              />
-              <button class="button button__white">送信する</button>
+              <?php
+                if( is_active_sidebar( 'email-form-one' ) ) {
+                  dynamic_sidebar( 'email-form-one' );
+                }
+              ?>
             </div>
           </div>
           <img
@@ -842,30 +840,12 @@
               </p>
             </div>
             <div class="contact__inputs gs_reveal gs_reveal_fromRight">
-              <input
-                class="input"
-                type="text"
-                name="name"
-                placeholder="お名前"
-              />
-              <input
-                class="input"
-                type="text"
-                name="email"
-                placeholder="メールアドレス"
-              />
-              <input
-                class="input"
-                type="text"
-                name="email"
-                placeholder="メールアドレス"
-              />
-              <textarea
-                class="textarea"
-                name="message"
-                placeholder="メッセージ"
-              ></textarea>
-              <button class="button button__white">送信する</button>
+
+              <?php
+                if( is_active_sidebar( 'contact' ) ) {
+                  dynamic_sidebar( 'contact' );
+                }
+              ?>
             </div>
           </div>
         </div>
@@ -880,13 +860,12 @@
           <div
             class="subscribe__button-contaier gs_reveal gs_reveal_fromBottom"
           >
-            <input
-              class="input"
-              type="text"
-              name="email"
-              placeholder="メールアドレス"
-            />
-            <button class="button button__primary-bg">送信する</button>
+
+            <?php
+                if( is_active_sidebar( 'email-form-two' ) ) {
+                  dynamic_sidebar( 'email-form-two' );
+                }
+              ?>
           </div>
         </div>
       </section>

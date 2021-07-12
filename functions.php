@@ -76,3 +76,39 @@ function change_logo_class( $html ) {
 
     return $html;
 }
+
+
+// sidebar & Contact
+add_action( 'widgets_init', 'sidebars' );
+function sidebars() {
+  // Main Contact Form
+  register_sidebar(
+    array(
+      'name' => 'お問い合わせフォーム',
+      'id' => 'contact',
+      'description' => 'コンタクトウィジットを入力してください。',
+      'before_widget' => '', //contact form 7 の::marker(点)を消す
+      'after_widget'  => '',
+    )
+  );
+  // Contact Form Primary
+  register_sidebar(
+    array(
+      'name' => 'メール送信フォーム(Primary)',
+      'id' => 'email-form-one',
+      'description' => 'コンタクトウィジットを入力してください。',
+      'before_widget' => '', //contact form 7 の::marker(点)を消す
+      'after_widget'  => '',
+    )
+  );
+  // Contact Form Secondary
+  register_sidebar(
+    array(
+      'name' => 'メール送信フォーム(Secondary)',
+      'id' => 'email-form-two',
+      'description' => 'コンタクトウィジットを入力してください。',
+      'before_widget' => '', //contact form 7 の::marker(点)を消す
+      'after_widget'  => '',
+    )
+  );
+}
